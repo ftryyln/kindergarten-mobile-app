@@ -1,107 +1,104 @@
-# TK Al-Muhajirin Mobile: All-in-One Kindergarten Ecosystem 🏫✨
+# TK Al-Muhajirin Mobile: The Digital Gateway to Early Childhood Excellence 🏫✨
 
 <p align="center">
-  <img src="assets/registrasi/logokbm.png" alt="TK Al-Muhajirin Logo" width="140"/>
+  <img src="assets/registrasi/logokbm.png" alt="TK Al-Muhajirin Logo" width="160"/>
 </p>
 
-## 📝 Overview
-**TK Al-Muhajirin Mobile** is a robust Flutter application designed as a comprehensive digital ecosystem for one of Indonesia's leading kindergartens. This project goes beyond simple information, providing a fully functional platform for **New Student Admission (PPDB)** and an integrated **School Shop** (e-commerce) for parents to manage all school-related needs in one place.
+## 📝 Project Overview
+**TK Al-Muhajirin Mobile** is a sophisticated Flutter-based digital ecosystem designed to unify school management, parent communication, and student services. Beyond a mere information portal, it provides a comprehensive platform for the **New Student Admission System (PPDB)** and a dedicated **Integrated School Shop** (Eco-system).
 
-With its vibrant, child-friendly design and smooth animations, the app bridges the gap between traditional school management and modern digital convenience.
-
----
-
-## 📱 App Highlights & Demos
-
-### 🔐 Secure Login & Custom Backgrounds
-Visual consistency throughout the app with playful wave designs and cloud assets.
-![Login Screen](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/logincap_screen.JPG?raw=true "Login Screen")
-
-### 🏡 Interactive Home & School Facilities
-Featuring dynamic carousels for school updates and facility showcases.
-![Home Demo](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/homeTK.gif?raw=true "Home Demo")
-
-### 📝 Progressive Student Registration
-A detailed multi-step registration flow ensuring accurate data collection from parents.
-![Registration Demo](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/pendaftaranTK.gif?raw=true "Registration Demo")
+The application is built with a deep understanding of the kindergarten's culture, featuring playful interactive elements, vibrant waves, and accessibility-first navigation, all while maintaining high performance and security standards.
 
 ---
 
-## ✨ Comprehensive Features
+## 📱 App Architectural Showcases
 
-### 1. Smart Student Admission (PPDB) 📝
-A logical, multi-step registration system powered by `im_stepper` that guides parents through:
-- **Child's Profile**: Detailed bio, date of birth (with custom date picker), and gender selection.
-- **Class Selection**: Choose between **Regular Classes** (Monday-Friday) or various **Extracurricular Programs**.
-- **Parental Information**: Dedicated sections for Father's and Mother's data.
-- **Validation**: Strict form validation for all critical fields.
-
-### 2. Integrated School Shop (E-Commerce) 🛒
-A full-fledged shopping experience for parents to purchase school necessities:
-- **Categories**: Browse specific sections like **Books, Backpacks, Uniforms (Cloth), and Stationery**.
-- **Best Seller Feature**: Dynamic carousel highlighting popular school items.
-- **Shopping Cart**: Real-time management of items before checkout.
-- **Order Tracking**: Keep track of purchase history and order status.
-
-### 3. School Environment & Facilities 🏫
-Interactive showcases of what makes TK Al-Muhajirin unique:
-- **School Info**: Vision and mission highlights on the main dashboard.
-- **Facility Slider**: Highlighting the **Playground, Futsal Court, and Computer Room**.
-- **Extracurricular Showcase**: Detailed info on programs like **Horse Riding (Berkuda)** and **Futsal**.
-
-### 4. Interactive Gallery 📸
-A beautiful, staggered grid gallery that lets parents see their children's activities in high resolution, providing peace of mind and shared memories.
+| Educational Portal | Student Registration | School Community |
+| :---: | :---: | :---: |
+| ![Home Screen](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/logincap_screen.JPG?raw=true) | ![Registration Demo](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/pendaftaranTK.gif?raw=true) | ![Home Demo](https://github.com/ftryyln/projectcjcc1/blob/master/gitassets/homeTK.gif?raw=true) |
 
 ---
 
-## 🛠️ Technical Stack & Architecture
+## ✨ Feature-Rich Modules
 
-### Core Technologies
-- **Framework**: [Flutter](https://flutter.dev/) (Material 3 enabled)
-- **State Management**: Reactive and robust internal state handling.
-- **Networking/API**: [Dio](https://pub.dev/packages/dio) for high-performance REST API interaction.
-- **Persistence**: [Local Storage](https://pub.dev/packages/localstorage) and [Flutter Secure Storage](https://pub.dev/packages/flutter_secure_storage) for sensitive session data.
+### 🎓 1. Advanced Student Admission (PPDB)
+A meticulously engineered multi-step registration journey using `im_stepper` that handles complex data flows:
+- **Child's Profile Development**: Capture detailed biological data, gender-specific profiling, and birthday integration.
+- **Academic Stream Selection**: Choice between **Regular Classes** focused on face-to-face daily interaction or various **Holistic Extracurriculars**.
+- **Dual-Parent Profile Integration**: Comprehensive data capture for both Father and Mother profiles.
+- **Dynamic Field Validation**: Real-time error handling with custom `GoogleFonts` stylized feedback.
 
-### Premium UI Components
-- **Navigation**: [Cool Nav / FlipBoxNavigationBar](https://pub.dev/packages/cool_nav) for satisfying, animated bottom navigation.
-- **Layout**: [Staggered Grid View](https://pub.dev/packages/flutter_staggered_grid_view) for the interactive gallery.
-- **Input**: [IM Stepper](https://pub.dev/packages/im_stepper) for managing complex registration logic.
-- **Visuals**: [Google Fonts (Be Vietnam Pro)](https://fonts.google.com/specimen/Be+Vietnam+Pro), [Lottie Animations](https://pub.dev/packages/lottie), and [Flutter SVG](https://pub.dev/packages/flutter_svg).
+### 🍱 2. School Life & Facilities
+A digital window into the school's physical and cultural environment:
+- **Facility Discovery**: Interactive sliders showcasing the **Standard Playground, Professional Futsal Court, and High-Tech Computer Room**.
+- **Extracurricular Focus**: 
+  - **🐎 Horse Riding (Berkuda)**: Developing cognitive and problem-solving skills through nature.
+  - **⚽ Futsal**: Enhancing teamwork, lung health, and quick thinking.
+- **Vision (Visi)**: "Membentuk generasi yang berakhlak karimah, mandiri dan kreatif."
+- **Mission (Misi)**: Aqidah-based upbringing, modern facilities, and active learning methodologies.
+
+### 🛒 3. Integrated School Shop (Smart Commerce)
+A purpose-built e-commerce module for parental convenience:
+- **Curated Collections**: Categorized browsing for **Textbooks, Designer Backpacks, Uniforms (Cloth), and Stationery**.
+- **Smart Cart Logic**: Efficient item management with real-time total calculation.
+- **Order Management**: Historical tracking of school supply purchases.
+
+### 👥 4. Organizational Transparency
+Detailed view of the school's leadership team:
+- **Leadership**: Led by **Prof. Dr. Fatih Fathur, S.Si., M.Si.** (Chairman) and **Drs. Nabila, M.Pd.** (Principal).
+- **Communication**: Welcome messages from the principal highlighting the school's commitment to future-ready learning.
+
+### 🖼️ 5. Dynamic Interactive Gallery
+- **Masonry Grid Layout**: Utilizing `flutter_staggered_grid_view` for a modern, social-media-style activity feed.
+- **Story-driven Media**: Each photo in the gallery comes with its own narrative, letting parents experience their children's learning journey.
 
 ---
 
-## 📁 Project Structure & Logic
+## 🛠️ Technology & Standard Implementations
+
+- **Logic Layer**: [Flutter](https://flutter.dev/) (Advanced Material 3 Styling)
+- **Data handling**: [Dio](https://pub.dev/packages/dio) for optimized HTTP requests and [Flutter Secure Storage](https://pub.dev/packages/flutter_secure_storage) for encrypted session keys.
+- **UI Design**:
+    - **Navigation**: Animated `FlipBoxNavigationBar` for premium feedback.
+    - **Typography**: Complete integration with `GoogleFonts` (especially *Be Vietnam Pro*).
+    - **Visuals**: Hybrid of `Flutter SVG` for iconography and high-definition raster assets for environment visuals.
+- **Utility**: `Image Picker` for profile/document uploads and `Carousel Slider` for dynamic information broadcasting.
+
+---
+
+## 📁 Repository Organization
 ```text
 lib/
-├── const/          # Themes, Lego-style buttons, and shared design tokens
-├── data/           # Repositories and Data models for Products & Registration
-├── helper/         # Global utilities (Formatters, Validators)
-└── ui/             # Feature-based folder structure
-    ├── home/       # Dashboard, School Profile, & Gallery
-    │   └── registrasi/   # Complex multi-step registration screens
-    ├── shop/       # Full e-commerce module (Cart, Categories, Account)
-    ├── login/      # Secure authentication portal
-    └── payment/    # Integrated checkout and payment processing
+├── const/          # Design system, shared widgets (Lego Buttons, Top Bars)
+├── data/           # Repositories & Serialized Models (Login, Registration)
+├── helper/         # Hero animations & Global formatters
+└── ui/             # Feature-driven UI implementation
+    ├── home/       # Core Dashboard, School Profile, & Gallery
+    │   └── registrasi/   # High-logic multi-step Admission forms
+    ├── shop/       # End-to-end e-commerce subsystem
+    ├── login/      # Encrypted authentication portal
+    └── payment/    # Secure transactional processing
 ```
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 Deployment Guide
 
-1. **Clone the Project**
+1. **Environment Setup**
    ```bash
-   git clone https://github.com/username/kindergarten-mobile-app.git
+   git clone https://github.com/username/tk-al-muhajirin-app.git
+   cd tk-al-muhajirin-app
    ```
-2. **Install Flutter Dependencies**
+2. **Dependency Resolution**
    ```bash
    flutter pub get
    ```
-3. **Run in Debug Mode**
+3. **Execution**
    ```bash
-   flutter run
+   flutter run --release # For optimized performance
    ```
 
 ---
 <p align="center">
-  Building the Foundation for Future Generations with ❤️
+  Educating with Heart, Innovating with Tech ❤️🚀
 </p>
