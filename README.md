@@ -1,7 +1,7 @@
 # TK Al-Muhajirin Mobile: The Digital Gateway to Early Childhood Excellence 🏫✨
 
 <p align="center">
-  <img src="assets/registrasi/logokbm.png" alt="TK Al-Muhajirin Logo" width="160"/>
+  <img src="assets/logo_tk.png" alt="TK Al-Muhajirin Logo" width="160"/>
 </p>
 
 ## 📝 Project Overview
