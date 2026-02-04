@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cool_nav/cool_nav.dart';
 import '../../const/card_search.dart';
 
 class Pencarian extends StatefulWidget {
-  const Pencarian({Key? key}) : super(key: key);
+  const Pencarian({super.key});
 
   @override
   State<Pencarian> createState() => _PencarianState();
@@ -31,7 +30,7 @@ class _PencarianState extends State<Pencarian> {
                       fontWeight: FontWeight.bold)),
             ),
             leading: Image.asset("assets/back.png")),
-        backgroundColor: Color(0xff44A7AD),
+        backgroundColor: const Color(0xff44A7AD),
         body: Column(
           children: [
             Image.asset(
@@ -41,7 +40,7 @@ class _PencarianState extends State<Pencarian> {
             ),
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 90,
                 ),
                 SizedBox(
@@ -53,7 +52,7 @@ class _PencarianState extends State<Pencarian> {
                         pencarianControler.text = search;
                       });
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: "Pencarian",
@@ -61,8 +60,8 @@ class _PencarianState extends State<Pencarian> {
                       //     style: GoogleFonts.beVietnamPro(
                       //         textStyle:
                       //         const TextStyle(fontSize: 14))),
-                      prefixIcon: const Icon(Icons.search),
-                      border: const OutlineInputBorder(
+                      prefixIcon: Icon(Icons.search),
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                         // borderSide: BorderSide(
                         //     color: Colors.white)
@@ -70,24 +69,24 @@ class _PencarianState extends State<Pencarian> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text("Hasil Pencarian : '${pencarianControler.text}'",
                     style: GoogleFonts.beVietnamPro(
                         textStyle:
-                            TextStyle(color: Colors.white, fontSize: 14))),
-                SizedBox(
+                            const TextStyle(color: Colors.white, fontSize: 14))),
+                const SizedBox(
                   height: 16,
                 ),
                 Expanded(
                   child: GridView.builder(
                     itemCount: 10,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                     ),
                     itemBuilder: (BuildContext context, int index) {
-                      return CardSearch(
+                      return const CardSearch(
                           image: "assets/futsal.jpg",
                           title:
                               "Pertandingan futsal antar siswa TK / sederajat.");

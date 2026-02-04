@@ -7,7 +7,7 @@ import 'package:tk_al_muhajirin/ui/login/forgot_password_screen.dart';
 import 'package:tk_al_muhajirin/ui/shop/home_shop_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C96F9),
+      backgroundColor: const Color(0xff1C96F9),
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
@@ -85,9 +85,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             if (controllerEmail.text.isEmpty) {
                               return "Email Tidak Boleh Kosong";
                             }
+                            return null;
                           },
                           decoration: InputDecoration(
-                            suffixIcon: Icon(
+                            suffixIcon: const Icon(
                               Icons.email_rounded,
                               color: Color(0xff1C96F9),
                             ),
@@ -95,19 +96,19 @@ class _LoginScreenState extends State<LoginScreen> {
                             fillColor: Colors.white,
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xff004781),
                                   width: 2,
                                 )),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xff004781),
                                   width: 2,
                                 )),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                   width: 2,
                                 )),
@@ -140,6 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             if (controllerPassword.text.isEmpty) {
                               return "Password Tidak Boleh Kosong";
                             }
+                            return null;
                           },
                           obscureText: isObscure,
                           decoration: InputDecoration(
@@ -148,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 isObscure
                                     ? Icons.visibility_off_rounded
                                     : Icons.visibility_rounded,
-                                color: Color(0xff1C96F9),
+                                color: const Color(0xff1C96F9),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -160,19 +162,19 @@ class _LoginScreenState extends State<LoginScreen> {
                             fillColor: Colors.white,
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xff004781),
                                   width: 2,
                                 )),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xff004781),
                                   width: 2,
                                 )),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                   width: 2,
                                 )),
@@ -211,7 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                     Text('Ingatkan Saya',
                                         style: GoogleFonts.beVietnamPro(
-                                          textStyle: TextStyle(
+                                          textStyle: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 14,
                                             fontWeight: FontWeight.w500,
@@ -226,11 +228,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              ForgotPasswordScreen()));
+                                              const ForgotPasswordScreen()));
                                 },
                                 child: Text('Lupa Password ?',
                                     style: GoogleFonts.beVietnamPro(
-                                      textStyle: TextStyle(
+                                      textStyle: const TextStyle(
                                         color: Color(0xFF660066),
                                         fontSize: 14,
                                         fontWeight: FontWeight.w500,
@@ -248,31 +250,31 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: 100,
                             height: 50,
                             decoration: BoxDecoration(
-                                border: Border.all(color: Color(0xff308612)),
+                                border: Border.all(color: const Color(0xff308612)),
                                 borderRadius: BorderRadius.circular(14)),
                             child: TextButton(
                               onPressed: () async {
                                 final form = formKey.currentState;
                                 if (form!.validate()) {
                                   _doLogin();
-                                  final storage = FlutterSecureStorage();
+                                  const storage = FlutterSecureStorage();
                                   await storage.write(key: "token", value: model?.data?.token);
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              HomeShopScreen()));
+                                              const HomeShopScreen()));
                                 }
                               },
                               style: TextButton.styleFrom(
-                                backgroundColor: Color(0xff46AD4C),
+                                backgroundColor: const Color(0xff46AD4C),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(14),
                                 ),
                               ),
                               child: Text('Login',
                                   style: GoogleFonts.beVietnamPro(
-                                    textStyle: TextStyle(
+                                    textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,

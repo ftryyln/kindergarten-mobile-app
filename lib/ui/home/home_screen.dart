@@ -10,7 +10,7 @@ import 'package:tk_al_muhajirin/ui/home/registrasi/register_screen.dart';
 import 'package:tk_al_muhajirin/ui/login/login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -36,11 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
     'assets/futsal.jpg',
   ];
   List<String> descEkskul = [
-    'Berkuda dapat meningkatkan pembelajaran, memori, pemecahan masalah, ' +
-        'dan kemampuan kognitif pada anak.',
-    'Futsal untuk melatih kerja sama tim, meningkatkan kesehatan paru-paru, ' +
-        'mencegah obesitas dan akan meningkatkan kemampuan pada anak untuk' +
-        'berpikir cepat',
+    'Berkuda dapat meningkatkan pembelajaran, memori, pemecahan masalah, ' 'dan kemampuan kognitif pada anak.',
+    'Futsal untuk melatih kerja sama tim, meningkatkan kesehatan paru-paru, ' 'mencegah obesitas dan akan meningkatkan kemampuan pada anak untuk' 'berpikir cepat',
   ];
 
   int indexFasilitas = 0;
@@ -58,11 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget selectedHomePage() {
     switch (indexBottomNav) {
       case 1:
-        return ProfilScreen();
+        return const ProfilScreen();
       case 2:
-        return Galeri();
+        return const Galeri();
       case 3:
-        return LoginScreen();
+        return const LoginScreen();
       default:
         return SingleChildScrollView(
           child: Column(
@@ -84,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(top: 44),
                     child: Column(
                       children: [
-                        Search(),
+                        const Search(),
                         const SizedBox(
                           height: 85,
                         ),
@@ -106,11 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: 9,
                               ),
                               Text(
-                                  "TK Al-Muhajirin berupaya untuk mengembangkan segenap potensi " +
-                                      "yang dimiliki anak melalui kegiatan bermain sambil belajar. " +
-                                      "Bermain sebagai sarana sosialisasi yang diharapkan dapat memberi " +
-                                      "kesempatan anak untuk bereksplorasi, berekspresi, berkreasi dan " +
-                                      "belajar secara menyenangkan.",
+                                  "TK Al-Muhajirin berupaya untuk mengembangkan segenap potensi " "yang dimiliki anak melalui kegiatan bermain sambil belajar. " "Bermain sebagai sarana sosialisasi yang diharapkan dapat memberi " "kesempatan anak untuk bereksplorasi, berekspresi, berkreasi dan " "belajar secara menyenangkan.",
                                   style: GoogleFonts.beVietnamPro(
                                       textStyle: const TextStyle(
                                           color: Colors.white))),
@@ -135,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  RegisterScreen()));
+                                                  const RegisterScreen()));
                                     },
                                     child: Text(
                                       "Pendaftaran Siswa Baru",
@@ -185,14 +178,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   }).toList(),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               CarouselIndicator(
                 count: sliderHome.length,
                 index: indexSlider,
                 color: Colors.grey,
-                activeColor: Color(0xff1C96F9),
+                activeColor: const Color(0xff1C96F9),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 20),
@@ -300,8 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding:
                                   const EdgeInsets.only(left: 16, right: 16),
                               child: Text(
-                                  "Kelas reguler di TK Al-Muhajirin dilaksanakan secara offline " +
-                                      "dan siswa datang ke sekolah setiap hari Senin sampai dengan hari Jumat",
+                                  "Kelas reguler di TK Al-Muhajirin dilaksanakan secara offline " "dan siswa datang ke sekolah setiap hari Senin sampai dengan hari Jumat",
                                   style: GoogleFonts.beVietnamPro(
                                       textStyle: const TextStyle(
                                           color: Colors.black, fontSize: 12))),
@@ -423,7 +415,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Stack(
@@ -459,7 +451,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 200,
                   ),
                   Positioned(
@@ -505,14 +497,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 );
                               }).toList(),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             CarouselIndicator(
                               count: sliderHome.length,
                               index: indexFasilitas,
                               color: Colors.white,
-                              activeColor: Color(0xff1C96F9),
+                              activeColor: const Color(0xff1C96F9),
                             ),
                             Container(
                               margin: const EdgeInsets.only(top: 15),
@@ -546,7 +538,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
@@ -560,10 +552,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       bottomNavigationBar: FlipBoxNavigationBar(
           currentIndex: indexBottomNav,
-          selectedItemTheme: IconThemeData(color: Colors.white, size: 35),
-          textStyle: TextStyle(color: Colors.white),
+          selectedItemTheme: const IconThemeData(color: Colors.white, size: 35),
+          textStyle: const TextStyle(color: Colors.white),
           unselectedItemTheme:
-              IconThemeData(color: Color(0xff1C96F9), size: 35),
+              const IconThemeData(color: Color(0xff1C96F9), size: 35),
           verticalPadding: 20.0,
           onTap: (index) {
             setState(() {
@@ -575,28 +567,28 @@ class _HomeScreenState extends State<HomeScreen> {
               name: '',
               selectedIcon: Icons.home_outlined,
               unselectedIcon: Icons.home_rounded,
-              selectedBackgroundColor: Color(0xff1C96F9),
+              selectedBackgroundColor: const Color(0xff1C96F9),
               unselectedBackgroundColor: Colors.white,
             ),
             FlipBoxNavigationBarItem(
               name: '',
               selectedIcon: Icons.info_outline,
               unselectedIcon: Icons.info,
-              selectedBackgroundColor: Color(0xff46AD4C),
+              selectedBackgroundColor: const Color(0xff46AD4C),
               unselectedBackgroundColor: Colors.white,
             ),
             FlipBoxNavigationBarItem(
               name: '',
               selectedIcon: Icons.photo_library_outlined,
               unselectedIcon: Icons.photo_library,
-              selectedBackgroundColor: Color(0xffFFA800),
+              selectedBackgroundColor: const Color(0xffFFA800),
               unselectedBackgroundColor: Colors.white,
             ),
             FlipBoxNavigationBarItem(
               name: '',
               selectedIcon: Icons.shopping_bag_outlined,
               unselectedIcon: Icons.shopping_bag,
-              selectedBackgroundColor: Color(0xffF82F40),
+              selectedBackgroundColor: const Color(0xffF82F40),
               unselectedBackgroundColor: Colors.white,
             ),
           ]),

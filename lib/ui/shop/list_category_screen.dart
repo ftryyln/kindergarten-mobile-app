@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tk_al_muhajirin/ui/shop/cart_screen.dart';
 
 class ListCategoryScreen extends StatefulWidget {
-  const ListCategoryScreen({Key? key}) : super(key: key);
+  const ListCategoryScreen({super.key});
 
   @override
   State<ListCategoryScreen> createState() => _ListCategoryScreenState();
@@ -40,7 +39,7 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff449849),
+        backgroundColor: const Color(0xff449849),
         appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 0,
@@ -65,7 +64,7 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
               width: MediaQuery.of(context).size.width,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
           // ListView.separated(
@@ -199,7 +198,7 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
                               width: 105,
                               decoration: BoxDecoration(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
+                                      const BorderRadius.all(Radius.circular(10)),
                                   image: DecorationImage(
                                       fit: BoxFit.fitWidth,
                                       image: AssetImage(imageCategory[index]))),
@@ -207,7 +206,7 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -223,7 +222,7 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
                               Text(
@@ -255,19 +254,19 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
                                   ),
                                   GestureDetector(
                                     onTap: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CartScreen()));
                                     },
                                     child: Container(
                                       alignment: Alignment.bottomRight,
                                       height: 40,
                                       width: 64,
                                       decoration: BoxDecoration(
-                                          color: Color(0xff46AD4C),
+                                          color: const Color(0xff46AD4C),
                                           border: Border.all(
-                                              color: Color(0xff308612), width: 2),
+                                              color: const Color(0xff308612), width: 2),
                                           borderRadius:
                                               BorderRadius.circular(10)),
-                                      child: Center(
+                                      child: const Center(
                                           child: Icon(
                                         Icons.shopping_cart_rounded,
                                         color: Colors.white,

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CardSearch extends StatelessWidget {
   final String image;
   final String title;
 
   const CardSearch({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class CardSearch extends StatelessWidget {
             child: Text(title,
                 maxLines: 2,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   overflow: TextOverflow.ellipsis,
                   fontSize: (12),
                   fontWeight: FontWeight.bold,

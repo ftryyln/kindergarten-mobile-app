@@ -5,13 +5,21 @@ class TextBox extends StatelessWidget {
   final String? title;
   final String? subtitle;
   final String label;
-  double? space = 0;
-  double? space2 = 0;
+  final double space;
+  final double space2;
+  final bool isObscure;
+  final bool isRemember;
 
-  TextBox({Key? key, this.title, this.subtitle, required this.label, this.space, this.space2}) : super(key: key);
-
-  bool isObscure = true;
-  bool isRemember = false;
+  const TextBox({
+    super.key,
+    this.title,
+    this.subtitle,
+    required this.label,
+    this.space = 0,
+    this.space2 = 0,
+    this.isObscure = true,
+    this.isRemember = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +64,13 @@ class TextBox extends StatelessWidget {
             fillColor: Colors.white,
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(3),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Color(0xff004781),
                   width: 2,
                 )),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(3),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Colors.grey,
                   width: 2,
                 )),

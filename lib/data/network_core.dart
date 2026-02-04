@@ -7,9 +7,9 @@ class NetworkCore {
   NetworkCore() {
     dio.options = BaseOptions(
       baseUrl: baseUrl,
-      connectTimeout: 30000,
-      receiveTimeout: 30000,
-      sendTimeout: 30000,
+      connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 30),
+      sendTimeout: const Duration(seconds: 30),
     );
   }
 }

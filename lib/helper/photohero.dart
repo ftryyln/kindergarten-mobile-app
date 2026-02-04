@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PhotoHero extends StatelessWidget {
-  const PhotoHero({Key? key, required this.photo, required this.onTap ,required this.tag}) : super(key: key);
+  const PhotoHero({super.key, required this.photo, required this.onTap ,required this.tag});
 final String tag;
   final String photo;
   final VoidCallback onTap;

@@ -5,7 +5,7 @@ import 'package:tk_al_muhajirin/const/lego_button.dart';
 import 'package:tk_al_muhajirin/ui/home/registrasi/register_ibu_screen.dart';
 
 class RegisterAyahScreen extends StatefulWidget {
-  const RegisterAyahScreen({Key? key}) : super(key: key);
+  const RegisterAyahScreen({super.key});
 
   @override
   State<RegisterAyahScreen> createState() => _RegisterAyahScreenState();
@@ -23,7 +23,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFF5400),
+      backgroundColor: const Color(0xffFF5400),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -51,7 +51,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
               fit: BoxFit.fitWidth,
               width: MediaQuery.of(context).size.width,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -77,11 +77,11 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                           border: Border.all(color: Colors.black, width: 5)),
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           Image.asset("assets/registrasi/picreg.jpg"),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           Text(
@@ -92,7 +92,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           SizedBox(
@@ -109,7 +109,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 16,
                                 ),
                                 Text(
@@ -120,7 +120,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 12,
                                 ),
                                 Text("Nama Lengkap",
@@ -137,19 +137,20 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     if (controllerParentName.text.isEmpty) {
                                       return "Nama Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -173,19 +174,20 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     if (controllerWork.text.isEmpty) {
                                       return "Pekerjaan Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -209,19 +211,20 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     if (controllerEdu.text.isEmpty) {
                                       return "Pendidikan Terakhir Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -245,19 +248,20 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     if (controllerNo.text.isEmpty) {
                                       return "Nomor Ponsel Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -281,19 +285,20 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                     if (controllerEmail.text.isEmpty) {
                                       return "Alamat Email Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -311,7 +316,7 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                             children: [
                               GestureDetector(
                                 onTap: () => Navigator.pop(context),
-                                child: LegoBack(
+                                child: const LegoBack(
                                     button:
                                         "assets/registrasi/yellow_lego_next.png",
                                     textButton: "Back"),
@@ -324,10 +329,10 @@ class _RegisterAyahScreenState extends State<RegisterAyahScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                RegisterIbuScreen()));
+                                                const RegisterIbuScreen()));
                                   }
                                 },
-                                child: LegoNext(
+                                child: const LegoNext(
                                     button:
                                         "assets/registrasi/red_lego_next.png",
                                     textButton: "Next"),

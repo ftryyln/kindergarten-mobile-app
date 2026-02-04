@@ -5,8 +5,7 @@ class Back extends StatelessWidget {
   final String icon;
   final String title;
 
-  const Back({Key? key, required this.icon, required this.title})
-      : super(key: key);
+  const Back({super.key, required this.icon, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class Back extends StatelessWidget {
         //   width: 20,
         // ),
         Center(
-          child: Container(
+          child: SizedBox(
             height: 30,
             child: Text(
               "Pencarian",

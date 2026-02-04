@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CIndicator extends StatelessWidget {
-  const CIndicator({Key? key}) : super(key: key);
+  const CIndicator({super.key});
 
   @override
   Widget build(BuildContext context) {

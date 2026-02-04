@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tk_al_muhajirin/ui/home/detail_galeri_screen.dart';
 
 class Galeri extends StatefulWidget {
-  const Galeri({Key? key}) : super(key: key);
+  const Galeri({super.key});
 
   @override
   State<Galeri> createState() => _GaleriState();
@@ -60,7 +60,7 @@ class _GaleriState extends State<Galeri> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffFFA800),
+        backgroundColor: const Color(0xffFFA800),
         body: Column(
           children: [
             Stack(
@@ -74,7 +74,7 @@ class _GaleriState extends State<Galeri> {
                   padding: const EdgeInsets.only(top: 44),
                   child: Column(
                     children: [
-                      Search(),
+                      const Search(),
                       const SizedBox(
                         height: 85,
                       ),

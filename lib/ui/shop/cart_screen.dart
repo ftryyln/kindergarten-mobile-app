@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tk_al_muhajirin/ui/shop/home_shop_screen.dart';
 
 class CartScreen extends StatefulWidget {
-  const CartScreen({Key? key}) : super(key: key);
+  const CartScreen({super.key});
 
   @override
   State<CartScreen> createState() => _CartScreenState();
@@ -42,7 +42,7 @@ class _CartScreenState extends State<CartScreen> {
             child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeShopScreen()));
+                    MaterialPageRoute(builder: (context) => const HomeShopScreen()));
               },
               child: SvgPicture.asset(
                 "assets/payment/icon_close_green.svg",
@@ -72,7 +72,7 @@ class _CartScreenState extends State<CartScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Checkbox(
-                                fillColor: const MaterialStatePropertyAll(
+                                fillColor: const WidgetStatePropertyAll(
                                     Colors.white),
                                 checkColor: Colors.blue,
                                 value: onCheck,

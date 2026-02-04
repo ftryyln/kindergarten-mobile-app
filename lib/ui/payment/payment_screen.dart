@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,7 +5,7 @@ import 'package:tk_al_muhajirin/ui/home/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PaymentScreen extends StatefulWidget {
-  const PaymentScreen({Key? key}) : super(key: key);
+  const PaymentScreen({super.key});
 
   @override
   State<PaymentScreen> createState() => _PaymentScreenState();
@@ -14,11 +13,14 @@ class PaymentScreen extends StatefulWidget {
 
 class _PaymentScreenState extends State<PaymentScreen> {
   bool shouldPop = false;
+  late final WebViewController _controller;
 
   @override
   void initState() {
     super.initState();
-    if (Platform.isAndroid) WebView.platform = AndroidWebView();
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse('https://demo.midtrans.com'));
   }
 
   @override
@@ -28,7 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         return shouldPop;
       },
       child: Scaffold(
-        backgroundColor: Color(0xff46AD4C),
+        backgroundColor: const Color(0xff46AD4C),
         appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 0,
@@ -49,7 +51,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              HomeScreen()));
+                              const HomeScreen()));
                 },
                 child: SvgPicture.asset(
                   "assets/payment/icon_close_green.svg",
@@ -68,10 +70,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 padding: const EdgeInsets.all(15),
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: const WebView(
-                    javascriptMode: JavascriptMode.unrestricted,
-                    initialUrl: 'https://demo.midtrans.com',
-                  ),
+                  child: WebViewWidget(controller: _controller),
                 ),
               ),
             ),

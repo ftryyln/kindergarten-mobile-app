@@ -7,15 +7,14 @@ class Struktur extends StatelessWidget {
   final String nama;
 
   const Struktur(
-      {Key? key,
+      {super.key,
       required this.jabatan,
       required this.image,
-      required this.nama})
-      : super(key: key);
+      required this.nama});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return  SizedBox(
       width: double.infinity,
       child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,14 +28,14 @@ class Struktur extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               CircleAvatar(
                 radius: 90,
                 backgroundImage: AssetImage(image),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Text(

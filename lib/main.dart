@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tk_al_muhajirin/ui/home/detail_galeri_screen.dart';
-import 'package:tk_al_muhajirin/ui/home/registrasi/register_ayah_screen.dart';
-import 'package:tk_al_muhajirin/ui/home/registrasi/register_ibu_screen.dart';
-import 'package:tk_al_muhajirin/ui/home/registrasi/register_screen.dart';
 import 'package:tk_al_muhajirin/ui/home/splash_screen.dart';
 
 void main() {
@@ -19,19 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
       ),
       //home: const LoginScreen()
-     home: SplashScreen()
+     home: const SplashScreen()
     );
   }
 }
@@ -107,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

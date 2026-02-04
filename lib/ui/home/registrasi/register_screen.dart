@@ -6,7 +6,7 @@ import 'package:tk_al_muhajirin/const/lego_button.dart';
 import 'package:tk_al_muhajirin/ui/home/registrasi/register_ayah_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -30,32 +30,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final controllerClass = TextEditingController();
   final controllerAddress = TextEditingController();
 
-  final List<String> _selectedItems = [];
 
-  // This function is triggered when a checkbox is checked or unchecked
-  void _itemChange(String itemValue, bool isSelected) {
-    if (isSelected) {
-      _selectedItems.add(itemValue);
-    } else {
-      _selectedItems.remove(itemValue);
-    }
-    setState(() {});
-  }
-
-  // this function is called when the Cancel button is pressed
-  void _cancel() {
-    Navigator.pop(context);
-  }
-
-// this function is called when the Submit button is tapped
-  void _submit() {
-    Navigator.pop(context, _selectedItems);
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFF5400),
+      backgroundColor: const Color(0xffFF5400),
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -85,7 +65,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               fit: BoxFit.fitWidth,
               width: MediaQuery.of(context).size.width,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -111,11 +91,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               border: Border.all(color: Colors.black, width: 5)),
                           child: Column(
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 height: 25,
                               ),
                               Image.asset("assets/registrasi/picreg.jpg"),
-                              SizedBox(
+                              const SizedBox(
                                 height: 25,
                               ),
                               Text(
@@ -126,7 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 25,
                               ),
                               SizedBox(
@@ -143,10 +123,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold)),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 16,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 12,
                                     ),
                                     Text("Nama Lengkap",
@@ -163,19 +143,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         if (controllerNameChild.text.isEmpty) {
                                           return "Nama Anak Tidak Boleh Kosong";
                                         }
+                                        return null;
                                       },
                                       decoration: InputDecoration(
                                         filled: true,
                                         fillColor: Colors.white,
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xff004781),
                                               width: 2,
                                             )),
                                         enabledBorder: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.grey,
                                               width: 2,
                                             )),
@@ -199,19 +180,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         if (controllerPlace.text.isEmpty) {
                                           return "Tempat Lahir Tidak Boleh Kosong";
                                         }
+                                        return null;
                                       },
                                       decoration: InputDecoration(
                                         filled: true,
                                         fillColor: Colors.white,
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xff004781),
                                               width: 2,
                                             )),
                                         enabledBorder: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.grey,
                                               width: 2,
                                             )),
@@ -237,6 +219,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           if (controllerDate.text.isEmpty) {
                                             return "Tanggal Lahir Tidak Boleh Kosong";
                                           }
+                                          return null;
                                         },
                                         decoration: InputDecoration(
                                           fillColor: Colors.white,
@@ -244,26 +227,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           focusedBorder: OutlineInputBorder(
                                               borderRadius:
                                               BorderRadius.circular(3),
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xff1C96F9),
                                                 width: 2,
                                               )),
                                           errorBorder: OutlineInputBorder(
                                               borderRadius:
                                               BorderRadius.circular(3),
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xffEB0303),
                                               )),
                                           border: OutlineInputBorder(
                                               borderRadius:
                                               BorderRadius.circular(3),
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xff004781),
                                               )),
                                           enabledBorder: OutlineInputBorder(
                                               borderRadius:
                                               BorderRadius.circular(3),
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.grey,
                                                 width: 2,
                                               )),
@@ -318,15 +301,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                                 decoration: BoxDecoration(
                                                     color: isSelected
                                                         ? Colors.white
-                                                        : Color(0xff8DCAFC),
-                                                    borderRadius: BorderRadius.only(
+                                                        : const Color(0xff8DCAFC),
+                                                    borderRadius: const BorderRadius.only(
                                                         topLeft: Radius.circular(3),
                                                         bottomLeft:
                                                         Radius.circular(3)),
                                                     border: Border.all(
                                                         color: isSelected
                                                             ? Colors.grey
-                                                            : Color(0xff1C96F9),
+                                                            : const Color(0xff1C96F9),
                                                         width: 2))),
                                             Positioned.fill(
                                               child: Column(
@@ -374,16 +357,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                                 width: 90,
                                                 decoration: BoxDecoration(
                                                     color: isSelected
-                                                        ? Color(0xffFF7CA4)
+                                                        ? const Color(0xffFF7CA4)
                                                         : Colors.white,
-                                                    borderRadius: BorderRadius.only(
+                                                    borderRadius: const BorderRadius.only(
                                                         topRight:
                                                         Radius.circular(3),
                                                         bottomRight:
                                                         Radius.circular(3)),
                                                     border: Border.all(
                                                         color: isSelected
-                                                            ? Color(0xffF82F40)
+                                                            ? const Color(0xffF82F40)
                                                             : Colors.grey,
                                                         width: 2))),
                                             Positioned.fill(
@@ -536,19 +519,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         if (controllerPlace.text.isEmpty) {
                                           return "Alamat Lengkap Tidak Boleh Kosong";
                                         }
+                                        return null;
                                       },
                                       decoration: InputDecoration(
                                         filled: true,
                                         fillColor: Colors.white,
                                         border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xff004781),
                                               width: 2,
                                             )),
                                         enabledBorder: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(3),
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.grey,
                                               width: 2,
                                             )),
@@ -572,10 +556,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    RegisterAyahScreen()));
+                                                    const RegisterAyahScreen()));
                                       }
                                     },
-                                    child: LegoNext(
+                                    child: const LegoNext(
                                         button:
                                         "assets/registrasi/yellow_lego_next.png",
                                         textButton: "Next"),

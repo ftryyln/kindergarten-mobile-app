@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 class InfoAccScreen extends StatefulWidget {
-  const InfoAccScreen({Key? key}) : super(key: key);
+  const InfoAccScreen({super.key});
 
   @override
   State<InfoAccScreen> createState() => _InfoAccScreenState();
@@ -26,7 +26,7 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C96F9),
+      backgroundColor: const Color(0xff1C96F9),
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -64,11 +64,11 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                   height: 150,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(color: Color(0xff1C96F9), width: 3),
-                      color: Color(0xff1C96F9),
+                      border: Border.all(color: const Color(0xff1C96F9), width: 3),
+                      color: const Color(0xff1C96F9),
                       image: DecorationImage(
                           image: gettedPhoto == null
-                              ? AssetImage("assets/struktur/wakasek.jpg")
+                              ? const AssetImage("assets/struktur/wakasek.jpg")
                                   as ImageProvider<Object>
                               : FileImage(File(gettedPhoto!.path)),
                           fit: BoxFit.cover)),
@@ -110,16 +110,16 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                         textAlign: TextAlign.left,
                         controller: controllerName,
                         enabled: isNameEdit,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
-                          contentPadding: const EdgeInsets.all(12),
+                          contentPadding: EdgeInsets.all(12),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -139,16 +139,16 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                         textAlign: TextAlign.left,
                         controller: controllerPhoneNumber,
                         enabled: isPhoneNumberEdit,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
-                          contentPadding: const EdgeInsets.all(12),
+                          contentPadding: EdgeInsets.all(12),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -168,16 +168,16 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                         textAlign: TextAlign.left,
                         controller: controllerEmail,
                         enabled: isEmailEdit,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
-                          contentPadding: const EdgeInsets.all(12),
+                          contentPadding: EdgeInsets.all(12),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextButton(
@@ -187,7 +187,7 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                       elevation: 4,
                       shadowColor: const Color(0xFF003D86),
                       shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.black, width: 2),
+                          side: const BorderSide(color: Colors.black, width: 2),
                           borderRadius: BorderRadius.circular(25)),
                     ),
                     onPressed: () {
@@ -208,7 +208,7 @@ class _InfoAccScreenState extends State<InfoAccScreen> {
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
               ],

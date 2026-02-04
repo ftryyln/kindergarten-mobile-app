@@ -5,7 +5,7 @@ import 'package:tk_al_muhajirin/ui/home/home_screen.dart';
 import 'package:tk_al_muhajirin/ui/shop/account/info_acc_screen.dart';
 
 class ProfileAccountScreen extends StatefulWidget {
-  const ProfileAccountScreen({Key? key}) : super(key: key);
+  const ProfileAccountScreen({super.key});
 
   @override
   State<ProfileAccountScreen> createState() => _ProfileAccountScreenState();
@@ -15,7 +15,7 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C96F9),
+      backgroundColor: const Color(0xff1C96F9),
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -41,7 +41,7 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
           ),
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -49,13 +49,13 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
                 height: 150,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xff1C96F9), width: 3),
-                    color: Color(0xff1C96F9),
-                    image: DecorationImage(
+                    border: Border.all(color: const Color(0xff1C96F9), width: 3),
+                    color: const Color(0xff1C96F9),
+                    image: const DecorationImage(
                       image: AssetImage("assets/struktur/wakasek.jpg"),
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -72,7 +72,7 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
                     textStyle: const TextStyle(
                         color: Color(0xff1C96F9), fontSize: 14)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               TextButton(
@@ -82,14 +82,14 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
                     elevation: 4,
                     shadowColor: const Color(0xFF003D86),
                     shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black, width: 2),
+                        side: const BorderSide(color: Colors.black, width: 2),
                         borderRadius: BorderRadius.circular(25)),
                   ),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => InfoAccScreen()));
+                            builder: (context) => const InfoAccScreen()));
                   },
                   child: Text(
                     "Ubah",
@@ -99,13 +99,13 @@ class _ProfileAccountScreenState extends State<ProfileAccountScreen> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                      MaterialPageRoute(builder: (context) => const HomeScreen()));
                 },
                 child: Text(
                   "Logout",

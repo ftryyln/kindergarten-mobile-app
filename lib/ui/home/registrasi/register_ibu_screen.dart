@@ -5,7 +5,7 @@ import 'package:tk_al_muhajirin/const/lego_button.dart';
 import 'package:tk_al_muhajirin/ui/payment/payment_screen.dart';
 
 class RegisterIbuScreen extends StatefulWidget {
-  const RegisterIbuScreen({Key? key}) : super(key: key);
+  const RegisterIbuScreen({super.key});
 
   @override
   State<RegisterIbuScreen> createState() => _RegisterIbuScreenState();
@@ -23,7 +23,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFF5400),
+      backgroundColor: const Color(0xffFF5400),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -51,7 +51,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
               fit: BoxFit.fitWidth,
               width: MediaQuery.of(context).size.width,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -77,11 +77,11 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                           border: Border.all(color: Colors.black, width: 5)),
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           Image.asset("assets/registrasi/picreg.jpg"),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           Text(
@@ -92,7 +92,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           SizedBox(
@@ -109,7 +109,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 16,
                                 ),
                                 Text(
@@ -120,7 +120,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 12,
                                 ),
                                 Text("Nama Lengkap",
@@ -137,19 +137,20 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     if (controllerEmail.text.isEmpty) {
                                       return "Nama Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -173,19 +174,20 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     if (controllerWork.text.isEmpty) {
                                       return "Pekerjaan Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -209,19 +211,20 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     if (controllerEdu.text.isEmpty) {
                                       return "Pendidikan Terakhir Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -245,19 +248,20 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     if (controllerNo.text.isEmpty) {
                                       return "No Ponsel Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -281,19 +285,20 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                     if (controllerEmail.text.isEmpty) {
                                       return "Alamat Email Tidak Boleh Kosong";
                                     }
+                                    return null;
                                   },
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xff004781),
                                           width: 2,
                                         )),
                                     enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(3),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.grey,
                                           width: 2,
                                         )),
@@ -311,7 +316,7 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                             children: [
                               GestureDetector(
                                 onTap: () => Navigator.pop(context),
-                                child: LegoBack(
+                                child: const LegoBack(
                                     button:
                                         "assets/registrasi/blue_lego_back.png",
                                     textButton: "Back"),
@@ -324,10 +329,10 @@ class _RegisterIbuScreenState extends State<RegisterIbuScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                PaymentScreen()));
+                                                const PaymentScreen()));
                                   }
                                 },
-                                child: LegoNext(
+                                child: const LegoNext(
                                     button:
                                         "assets/registrasi/green_lego_send.png",
                                     textButton: "Daftar"),

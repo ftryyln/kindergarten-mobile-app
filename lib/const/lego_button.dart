@@ -5,7 +5,7 @@ class LegoNext extends StatelessWidget {
 
   final String button;
   final String textButton;
-  const LegoNext({Key? key, required this.button, required this.textButton}) : super(key: key);
+  const LegoNext({super.key, required this.button, required this.textButton});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class LegoNext extends StatelessWidget {
 class LegoBack extends StatelessWidget {
   final String button;
   final String textButton;
-  const LegoBack({Key? key, required this.button, required this.textButton}) : super(key: key);
+  const LegoBack({super.key, required this.button, required this.textButton});
 
   @override
   Widget build(BuildContext context) {

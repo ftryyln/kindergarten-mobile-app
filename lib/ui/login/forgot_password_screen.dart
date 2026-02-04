@@ -4,7 +4,7 @@ import 'package:tk_al_muhajirin/const/theme.dart';
 import 'package:tk_al_muhajirin/ui/login/login_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  const ForgotPasswordScreen({super.key});
 
   @override
   State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
@@ -84,6 +84,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               if (controllerEmail.text.isEmpty) {
                                 return "Email Tidak Boleh Kosong";
                               }
+                              return null;
                             },
                             decoration: InputDecoration(
                               filled: true,
@@ -98,7 +99,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               contentPadding: const EdgeInsets.all(12),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           Text(
@@ -118,6 +119,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               if (controllerPassword.text.isEmpty) {
                                 return "Password Tidak Boleh Kosong";
                               }
+                              return null;
                             },
                             obscureText: isObscure,
                             decoration: InputDecoration(
@@ -162,6 +164,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               if (controllerConfirmPass.text.isEmpty) {
                                 return "Password Tidak Boleh Kosong";
                               }
+                              return null;
                             },
                             obscureText: isObscure1,
                             decoration: InputDecoration(
@@ -194,7 +197,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                               width: 100,
                               height: 50,
                               decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xff308612)),
+                                  border: Border.all(color: const Color(0xff308612)),
                                   borderRadius: BorderRadius.circular(14)),
                               child: TextButton(
                                 onPressed: () {
@@ -204,18 +207,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                LoginScreen()));
+                                                const LoginScreen()));
                                   }
                                 },
                                 style: TextButton.styleFrom(
-                                  backgroundColor: Color(0xff46AD4C),
+                                  backgroundColor: const Color(0xff46AD4C),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(14),
                                   ),
                                 ),
                                 child: Text('Submit',
                                     style: GoogleFonts.beVietnamPro(
-                                      textStyle: TextStyle(
+                                      textStyle: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,

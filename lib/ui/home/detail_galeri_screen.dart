@@ -7,8 +7,7 @@ class DetailGaleriScreen extends StatefulWidget {
   final String title;
   final String desc;
 
-  const DetailGaleriScreen({Key? key, required this.tag, required this.image, required this.title, required this.desc})
-      : super(key: key);
+  const DetailGaleriScreen({super.key, required this.tag, required this.image, required this.title, required this.desc});
 
   @override
   State<DetailGaleriScreen> createState() => _DetailGaleriScreenState();
@@ -18,7 +17,7 @@ class _DetailGaleriScreenState extends State<DetailGaleriScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFA800),
+      backgroundColor: const Color(0xffFFA800),
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,

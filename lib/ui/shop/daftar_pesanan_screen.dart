@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tk_al_muhajirin/ui/shop/cart_screen.dart';
 
 class DaftarPesananScreen extends StatefulWidget {
-  const DaftarPesananScreen({Key? key}) : super(key: key);
+  const DaftarPesananScreen({super.key});
 
   @override
   State<DaftarPesananScreen> createState() => _DaftarPesananScreenState();
@@ -13,7 +13,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff44A7AD),
+      backgroundColor: const Color(0xff44A7AD),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -37,7 +37,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                 width: MediaQuery.of(context).size.width,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 9,
             ),
             Padding(
@@ -58,7 +58,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                       child: Container(
                         height: 105,
                         width: 105,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             image: DecorationImage(
                                 fit: BoxFit.fitWidth,
@@ -67,7 +67,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                         //width: MediaQuery.of(context).size.width,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Column(
@@ -77,7 +77,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -96,7 +96,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Column(
@@ -135,7 +135,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  CartScreen()));
+                                                  const CartScreen()));
 
                                   },
                                   child: Container(
@@ -145,7 +145,7 @@ class _DaftarPesananScreenState extends State<DaftarPesananScreen> {
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         border: Border.all(
-                                            color: Color(0xff308612), width: 2),
+                                            color: const Color(0xff308612), width: 2),
                                         borderRadius: BorderRadius.circular(10)),
                                     child: Center(
                                       child: Text(

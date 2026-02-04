@@ -6,7 +6,7 @@ import 'package:tk_al_muhajirin/const/top.dart';
 import 'package:tk_al_muhajirin/ui/home/registrasi/register_screen.dart';
 
 class ProfilScreen extends StatefulWidget {
-  const ProfilScreen({Key? key}) : super(key: key);
+  const ProfilScreen({super.key});
 
   @override
   State<ProfilScreen> createState() => _ProfilScreenState();
@@ -38,7 +38,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 padding: const EdgeInsets.only(top: 44),
                 child: Column(
                   children: [
-                    Search(),
+                    const Search(),
                     const SizedBox(
                       height: 85,
                     ),
@@ -60,11 +60,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               height: 9,
                             ),
                             Text(
-                                "TK Al-Muhajirin berupaya untuk mengembangkan segenap potensi " +
-                                    "yang dimiliki anak melalui kegiatan bermain sambil belajar. " +
-                                    "Bermain sebagai sarana sosialisasi yang diharapkan dapat memberi " +
-                                    "kesempatan anak untuk bereksplorasi, berekspresi, berkreasi dan " +
-                                    "belajar secara menyenangkan.",
+                                "TK Al-Muhajirin berupaya untuk mengembangkan segenap potensi " "yang dimiliki anak melalui kegiatan bermain sambil belajar. " "Bermain sebagai sarana sosialisasi yang diharapkan dapat memberi " "kesempatan anak untuk bereksplorasi, berekspresi, berkreasi dan " "belajar secara menyenangkan.",
                                 style: GoogleFonts.beVietnamPro(
                                     textStyle:
                                         const TextStyle(color: Colors.white))),
@@ -88,7 +84,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              RegisterScreen()));
+                                              const RegisterScreen()));
                                 },
                                 child: Text(
                                   "Pendaftaran Siswa Baru",
@@ -119,14 +115,14 @@ class _ProfilScreenState extends State<ProfilScreen> {
                         fontSize: 16,
                         fontWeight: FontWeight.bold)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 60,
                 backgroundImage: AssetImage("assets/struktur/kepsek.jpg"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Text(
@@ -141,16 +137,14 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 height: 20,
               ),
               Text(
-                "Dengan fasilitas, teknologi, metode pembelajaran serta " +
-                    "yang memang didesain untuk menghadapi model pembelajaran" +
-                    "di masa depan.",
+                "Dengan fasilitas, teknologi, metode pembelajaran serta " "yang memang didesain untuk menghadapi model pembelajaran" "di masa depan.",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.beVietnamPro(
                     textStyle: const TextStyle(color: Colors.black)),
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Stack(children: [
@@ -185,23 +179,23 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 options: CarouselOptions(
                     height: 250.0, autoPlay: true, viewportFraction: 1),
                 items: [
-                  Struktur(
+                  const Struktur(
                       jabatan: "Kepala Yayasan",
                       image: "assets/struktur/kepyas.jpg",
                       nama: "Prof. Dr. Fatih Fathur, S.Si., M.Si."),
-                  Struktur(
+                  const Struktur(
                       jabatan: "Kepala Sekolah",
                       image: "assets/struktur/kepsek.jpg",
                       nama: "Drs. Nabila, M.Pd."),
-                  Struktur(
+                  const Struktur(
                       jabatan: "Wakil Kepala Sekolah",
                       image: "assets/struktur/wakasek.jpg",
                       nama: "Nurul Khotimah, S.Pd., M.Pd."),
-                  Struktur(
+                  const Struktur(
                       jabatan: "Sekretaris",
                       image: "assets/struktur/sekre.png",
                       nama: "Sheila, S.Pd., M.Pd."),
-                  Struktur(
+                  const Struktur(
                       jabatan: "Bendahara",
                       image: "assets/struktur/bendahara.jpg",
                       nama: "Sheila, S.Pd., M.Pd.")
@@ -211,7 +205,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
               ),
             ),
           ]),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Stack(
@@ -242,18 +236,16 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               fontSize: 24,
                               fontWeight: FontWeight.bold),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
-                        '"Membentuk generasi yang' +
-                            ' berakhlak karimah, mandiri dan' +
-                            ' kreatif"',
+                        '"Membentuk generasi yang' ' berakhlak karimah, mandiri dan' ' kreatif"',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.beVietnamPro(
                             textStyle: const TextStyle(
                                 color: Colors.white, fontSize: 18))),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Text("MISI",
@@ -270,7 +262,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                               fontSize: 24,
                               fontWeight: FontWeight.bold),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(

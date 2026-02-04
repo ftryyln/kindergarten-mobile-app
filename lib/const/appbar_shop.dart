@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppbarShop extends StatelessWidget {
   //final String title;
-  const AppbarShop({Key? key}) : super(key: key);
+  const AppbarShop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class AppbarShop extends StatelessWidget {
                           color: Colors.white70))),
             )
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
       ],
