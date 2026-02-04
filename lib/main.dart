@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tk_al_muhajirin/ui/home/splash_screen.dart';
 
 void main() {
@@ -12,11 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'TK Al-Muhajirin',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF46AD4C),
+          primary: const Color(0xFF46AD4C),
+          secondary: const Color(0xff1C96F9),
+        ),
         useMaterial3: true,
+        textTheme: GoogleFonts.beVietnamProTextTheme(),
       ),
       //home: const LoginScreen()
      home: const SplashScreen()

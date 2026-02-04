@@ -57,12 +57,10 @@ class _ListCategoryScreenState extends State<ListCategoryScreen> {
                 child: Image.asset("assets/back.png"))),
         body: SingleChildScrollView(
             child: Column(children: [
-          Container(
-            child: Image.asset(
-              "assets/awan_atas2.png",
-              fit: BoxFit.fitWidth,
-              width: MediaQuery.of(context).size.width,
-            ),
+          Image.asset(
+            "assets/awan_atas2.png",
+            fit: BoxFit.fitWidth,
+            width: MediaQuery.of(context).size.width,
           ),
           const SizedBox(
             height: 9,

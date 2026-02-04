@@ -256,9 +256,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: () async {
                                 final form = formKey.currentState;
                                 if (form!.validate()) {
-                                  _doLogin();
+                                  await _doLogin();
+                                  if (!context.mounted) return;
+                                  
                                   const storage = FlutterSecureStorage();
                                   await storage.write(key: "token", value: model?.data?.token);
+                                  
+                                  if (!context.mounted) return;
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(

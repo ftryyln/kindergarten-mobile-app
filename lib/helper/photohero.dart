@@ -8,8 +8,7 @@ final String tag;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Material(
+    return Material(
         color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
@@ -21,7 +20,6 @@ final String tag;
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

@@ -25,9 +25,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return shouldPop;
+    return PopScope(
+      canPop: shouldPop,
+      onPopInvokedWithResult: (didPop, result) {
+        // You can handle the pop attempt here if needed
       },
       child: Scaffold(
         backgroundColor: const Color(0xff46AD4C),

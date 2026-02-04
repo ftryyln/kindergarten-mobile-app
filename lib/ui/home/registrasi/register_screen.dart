@@ -260,17 +260,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                               firstDate: DateTime(2010),
                                               lastDate: DateTime(2025));
                                           if (pickeDate != null) {
-                                            print(pickeDate);
                                             String formattedDate =
                                             DateFormat('dd-MM-yyyy')
                                                 .format(pickeDate);
-                                            print(formattedDate);
                                             controllerDate.text = formattedDate;
                                             setState(() {
                                               controllerDate.text = formattedDate;
                                             });
-                                          } else {
-                                            print("Date is not selected");
                                           }
                                         },
                                       ),

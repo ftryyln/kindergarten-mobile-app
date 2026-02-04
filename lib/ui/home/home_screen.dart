@@ -233,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   shadows: [
                                 Shadow(
                                   offset: const Offset(0, 4),
-                                  color: Colors.black.withOpacity(0.25),
+                                  color: Colors.black.withValues(alpha: 0.25),
                                   blurRadius: 4,
                                 ),
                               ],
@@ -254,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(5),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.2),
+                                color: Colors.black.withValues(alpha: 0.2),
                                 blurRadius: 4,
                                 spreadRadius: 4,
                               )
@@ -315,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(5),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.2),
+                                color: Colors.black.withValues(alpha: 0.2),
                                 blurRadius: 4,
                                 spreadRadius: 4,
                               )
@@ -337,10 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(
                               height: 10,
                             ),
-                            Padding(
-                              padding: EdgeInsets.zero,
-                              child: Container(
-                                child: Column(
+                            Column(
                                   children: [
                                     CarouselSlider(
                                       options: CarouselOptions(
@@ -406,14 +403,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ],
                                 ),
-                              ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                  ],
               ),
               const SizedBox(
                 height: 20,
@@ -440,7 +435,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               shadows: [
                                 Shadow(
                                   offset: const Offset(0, 4),
-                                  color: Colors.black.withOpacity(0.25),
+                                  color: Colors.black.withValues(alpha: 0.25),
                                   blurRadius: 4,
                                 ),
                               ],
@@ -458,10 +453,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     top: 100,
                     left: 0,
                     right: 0,
-                    child: Padding(
-                      padding: EdgeInsets.zero,
-                      child: Container(
-                        child: Column(
+                    child: Column(
                           children: [
                             CarouselSlider(
                               options: CarouselOptions(
@@ -520,7 +512,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           Shadow(
                                             offset: const Offset(0, 4),
                                             color:
-                                                Colors.black.withOpacity(0.25),
+                                                Colors.black.withValues(alpha: 0.25),
                                             blurRadius: 4,
                                           ),
                                         ],
@@ -534,9 +526,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                    ),
-                  ),
-                ],
+                  ],
               ),
               const SizedBox(
                 height: 20,

@@ -31,12 +31,10 @@ class _HomeShopScreenState extends State<HomeShopScreen> {
       default:
         return SingleChildScrollView(
           child: Column(children: [
-            Container(
-              child: Image.asset(
-                "assets/awan_atas2.png",
-                fit: BoxFit.fitWidth,
-                width: MediaQuery.of(context).size.width,
-              ),
+            Image.asset(
+              "assets/awan_atas2.png",
+              fit: BoxFit.fitWidth,
+              width: MediaQuery.of(context).size.width,
             ),
             const SizedBox(
               height: 9,
@@ -140,7 +138,7 @@ class _HomeShopScreenState extends State<HomeShopScreen> {
                                           child: Container(
                                             alignment: Alignment.center,
                                             color:
-                                                Colors.white.withOpacity(0.8),
+                                                Colors.white.withValues(alpha: 0.8),
                                             width: 170,
                                             child: Text(
                                               "Book",
@@ -183,7 +181,7 @@ class _HomeShopScreenState extends State<HomeShopScreen> {
                                         left: 0,
                                         child: Container(
                                           alignment: Alignment.center,
-                                          color: Colors.white.withOpacity(0.8),
+                                          color: Colors.white.withValues(alpha: 0.8),
                                           width: 170,
                                           child: Text(
                                             "Backpack",
@@ -233,7 +231,7 @@ class _HomeShopScreenState extends State<HomeShopScreen> {
                                         left: 0,
                                         child: Container(
                                           alignment: Alignment.center,
-                                          color: Colors.white.withOpacity(0.8),
+                                          color: Colors.white.withValues(alpha: 0.8),
                                           width: 170,
                                           child: Text(
                                             "Cloth",
@@ -275,7 +273,7 @@ class _HomeShopScreenState extends State<HomeShopScreen> {
                                         left: 0,
                                         child: Container(
                                           alignment: Alignment.center,
-                                          color: Colors.white.withOpacity(0.8),
+                                          color: Colors.white.withValues(alpha: 0.8),
                                           width: 170,
                                           child: Text(
                                             "Alat Tulis",
